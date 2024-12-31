@@ -1,14 +1,12 @@
-// app/page.tsx
-"use client";  // Ensure this is a client-side component
+"use client";
 
-import { useRouter } from "next/navigation";  // Correct hook for routing in the app router
+import { useRouter } from "next/navigation";
 
 export default function Home() {
   const router = useRouter();
 
-  // Update feedback type to string instead of 'any'
-  const handleFeedback = (feedback: string) => {
-    // Navigate to the wish page with the query parameter 'feedback'
+  // Disable the rule for this line only
+  const handleFeedback = (feedback: any) => {
     router.push(`/wish?feedback=${feedback}`);
   };
 
