@@ -1,4 +1,4 @@
-// app/page.js
+// app/page.tsx
 "use client";  // Ensure this is a client-side component
 
 import { useRouter } from "next/navigation";  // Correct hook for routing in the app router
@@ -6,7 +6,8 @@ import { useRouter } from "next/navigation";  // Correct hook for routing in the
 export default function Home() {
   const router = useRouter();
 
-  const handleFeedback = (feedback:any) => {
+  // Update feedback type to string instead of 'any'
+  const handleFeedback = (feedback: string) => {
     // Navigate to the wish page with the query parameter 'feedback'
     router.push(`/wish?feedback=${feedback}`);
   };
@@ -14,10 +15,10 @@ export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-50 text-center p-6">
       <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
-        Welcome to 2026 🎉
+        Welcome to 2025 🎉
       </h1>
       <p className="text-base md:text-lg text-gray-600 mb-8">
-        How was your experience in 2025?
+        How was your experience in 2024?
       </p>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 w-full max-w-md sm:max-w-lg">
         <button
